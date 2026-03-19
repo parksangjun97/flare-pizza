@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Arbutus+Slab&family=Archivo+Black&family=Archivo:wght@300&family=Karantina:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+}
+html, body{
+  width: 100%;
+}
+ul{
+  list-style: none;
+}
+address{
+  font-style: normal;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+h1{
+  font-family: 'Archivo Black';
+}
+
+.floating-pizza {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}

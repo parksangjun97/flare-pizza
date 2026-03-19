@@ -1,0 +1,26 @@
+
+:root{
+    --fred: #DB0606;
+    --fbeige: #FDFAED;
+    --fblack: #000000;
+
+    --theme-bg: var(--fbeige);
+    --theme-text: var(--fred);
+    --card-border: var(--fred);
+}
+
+[data-theme='dark']{
+    --theme-bg: var(--fred);
+    --theme-text: var(--fbeige);
+    --card-border: var(--fbeige);
+}
+[data-theme='dark'] .mode-toggle .btn-light{
+    background-image: url('../images/sunIcon_dark.png') !important;
+}
+[data-theme='dark'] .mode-toggle .btn-dark{
+    background-image: url('../images/darkIcon_dark.png') !important;
+}
+[data-theme='dark'] .today-area .arrow {
+    filter: invert(1) sepia(1) saturate(1) hue-rotate(10deg) brightness(1.8);
+}
+

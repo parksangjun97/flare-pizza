@@ -58,7 +58,6 @@
     padding: 35px 3%;
     width: 100%;
     position: relative;
-    overflow: hidden;
 }
 .main-header nav button{
     border: 1px solid var(--theme-text);
@@ -77,9 +76,9 @@
     background-color: var(--theme-text);
     color: var(--theme-bg);
 }
-.main-header img{
+.main-header h1 img{
     width: 100%;
-    transform: translateX(-44%);
+    transform: translate(-50%, -50%);
     position: absolute;
     left: 48.5%;
 }
@@ -92,18 +91,24 @@
     font-family: 'Archivo Black';
     margin-bottom: 20px;
 }
-.footer-box > div address{
+.footer-box > div > ul li{
     font-family: 'Karantina';
     letter-spacing: 1px;
 }
-.footer-box > div address:first-of-type{
+.footer-box > div > ul li .border{
     font-weight: 300;
     border-bottom: 1px solid var(--theme-bg);
+    margin-bottom: 10px;
 }
-.footer-box > div address:last-of-type{
+.footer-box > div > ul li address{
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 30px;
+    width: 235px;
+}
+.footer-box > div > ul li .block{
+    display: block;
+    font-weight: 300;
 }
 .footer-box > div button{
     font-family: 'Karantina';
@@ -123,20 +128,23 @@
     background-color: var(--theme-bg);
     color: var(--theme-text);
 }
-.footer-box > div > div p span{
+.footer-box > div > ul li .phone,
+.footer-box > div > ul li > div span:last-of-type{
     display: block;
-}
-.footer-box > div > div p{
-    margin-bottom: 20px;
-    font-family: 'Karantina';
     font-weight: 300;
-    letter-spacing: 1px;
 }
+
+.footer-box > div > ul .marginB{
+    margin-bottom: 20px;
+}
+
+
 .footer-box > .footer-logo p{
     font-family: 'Karantina';
     font-weight: 300;
     border-bottom: 1px solid var(--theme-bg);
     letter-spacing: 1px;
+    width: 205px;
 }
 .footer-box .footer-slider{
     width: 35%;
@@ -205,15 +213,8 @@
     .footer-box > div h3{
         font-size: 24px;
     }
-    .footer-box > div address:first-of-type{
-        width: 37px;
-        margin-bottom: 10px;
-    }
     .footer-box > .footer-logo img{
         width: 300px;
-    }
-    .footer-box > .footer-logo p{
-        width: 204px;
     }
     .footer-box .footer-slider{
         width: 35%;

@@ -133,8 +133,9 @@ function App(){
               <button onClick={() => setView('menu')}>MENU</button>
               <button onClick={() => window.open('https://www.instagram.com', '_blank')}>SNS</button>
             </nav>
-
-            <img src={logo} alt="Flare logo"/>
+            <h1>
+              <img src={logo} alt="Flare logo"/>
+            </h1>
 
             <div className="mode-toggle">
               <button type="button" className="btn-light" onClick={() => setIsDarkMode(false)}></button>
@@ -270,19 +271,33 @@ function App(){
             <div className="footer-box">
               <div>
                 <h3>( SHOP )</h3>
-                <address>ADDRESS</address>
-                <address>2-4-8-101 Kotobuki Taito-ku, Seoul 111-0042</address>
-                <button className="google-map-btn" onClick={() => window.open('https://www.google.com/maps/search/Flare+Pizza/@35.707198,139.789128,17z', '_blank')}>
-                  GOOGLE MAP
-                </button>
-                <div className="open-hours">
-                  <p><span>OPEN</span> 11:00 - 22:00</p>
-                  <p><span>CLOSE</span> Tuesday & Wednesday Close</p>
-                </div>
+                <ul>
+                  <li>
+                    <span className='border'>ADDRESS</span>
+                    <address>2-4-8-101 Kotobuki Taito-ku, Seoul 111-0042</address>
+                  </li>
+                  <li>
+                    <button className="google-map-btn" onClick={() => window.open('https://www.google.com/maps/search/Flare+Pizza/@35.707198,139.789128,17z', '_blank')}>
+                    GOOGLE MAP
+                    </button>
+                  </li>
+                  <li className='marginB'>
+                    <span className='border'>PHONE</span>
+                    <span className='phone'>070-1234-1234</span>
+                  </li>
+                  <li className='marginB'>
+                    <span className='border'>OPEN</span>
+                    <span className='block'>11:30 ~ 19:00</span>
+                  </li>
+                  <li>
+                    <span className='border'>CLOSE</span>
+                    <span className='block'>Tuesday & Wednesday</span>
+                  </li>
+                </ul>
               </div>
 
               <div className="footer-logo">
-                <img src={logo} alt="Flare Logo"/>
+                <h2><img src={logo} alt="Flare Logo"/></h2>
                 <p>Copyright (C) Flare Pizza. All Rights Reserved.</p>
               </div>
 

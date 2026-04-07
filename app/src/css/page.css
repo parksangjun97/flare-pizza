@@ -149,9 +149,6 @@
     font-family: 'antonio';
 }
 
-.signature-area{
-    text-align: center;
-}
 
 .signature-title h2{
     font-family: 'Archivo Black';
@@ -174,7 +171,6 @@
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 200px;
 }
 
 .menu-container li{
@@ -257,7 +253,6 @@
     overflow: hidden;
 }
 .today-area div{
-    margin: 0 auto;
     max-width: 1900px;
     text-align: center;
 }
@@ -280,58 +275,12 @@
     background-color: var(--theme-text);
     color: var(--theme-bg);
 }
-.today-area .marquee-container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-bottom: 100px;
-    height: 450px;
-}
-
-.today-area .marquee-text{
-    display: flex;
-    white-space: nowrap;
-    font-family: 'Archivo Black';
-    font-size: 64px;
-    color: var(--theme-text);
-    z-index: 10;
-    animation: marquee-run 20s linear infinite;
-}
 
 @keyframes marquee-run{
     0%{transform: translateX(0);}
     100%{transform: translateX(-50%);}
 }
 
-.today-area .center-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.today-area .slide-box{
-    width: 230px;
-    height: 360px;
-    position: relative;
-}
-
-.today-area .slide-box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.today-area .arrow{
-    position: absolute;
-    top: -70px;
-    right: -10px;
-    width: 130px;
-    z-index: 20;
-    animation: bounceUpDown 0.8s ease-in-out infinite alternate;
-}
 
 @keyframes bounceUpDown{
     0% {
@@ -341,16 +290,11 @@
         transform: translateY(15px);
     }
 }
-.today-area .slide-box{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-    overflow: visible;
-}
 .today-area .slide-box > img{
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 .today-area .mySwiper{
@@ -415,12 +359,6 @@
 @media (min-width: 1024px){
     .main-area{
         padding-top: 150px;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     .main-area h1{
         font-size: 80px; 
@@ -467,7 +405,6 @@
     
     .signature-title h2{
         font-size: 64px;
-        margin-bottom: 10px;
         height: 80px;
     }
     
@@ -520,19 +457,6 @@
     }
     
     
-    .today-area .slide-box{
-        width: 230px;
-        height: 360px;
-        position: relative;
-    }
-    
-    .today-area .slide-box img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-    
     .today-area .arrow{
         position: absolute;
         top: -70px;
@@ -554,28 +478,8 @@
         position: relative;
         width: 320px;
         margin: 0 auto;
+        height: 360px;
         overflow: visible;
-    }
-    .today-area .slide-box > img{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .today-area .mySwiper{
-        position: absolute !important;
-        top: 37%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 100%;
-        z-index: 20;
-        overflow: visible;
-    }
-    .today-area .slice-img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain !important;
     }
     
     .h-type1{height: 400px !important;}
@@ -601,7 +505,6 @@
         top: 0;
         border-right: 2px solid var(--theme-text);
         padding: 35px 30px;
-        box-sizing: border-box;
         display: block;
     }
     
@@ -640,8 +543,11 @@
     .menu-page main ul{
         margin-top: 50px;
     }
+    .menu-page main ul li:first-of-type {
+        border-top: 2px solid var(--theme-text);
+    }
     .menu-page main ul li:not(:last-of-type){
-        border-block: 2px solid var(--theme-text);
+        border-bottom: 2px solid var(--theme-text);
         display: flex;
         flex-wrap: wrap;
         padding: 50px 4%;
@@ -654,7 +560,7 @@
         width: 350px;
     }
     
-    .menu-page main ul li div span{
+    .menu-page main ul li div b{
         font-family: 'Arbutus Slab';
         border: 1px solid var(--theme-text);
         color: var(--theme-text);
@@ -847,20 +753,6 @@
         transform: translate(-50%, -50%);
     }
     
-    
-    .today-area .slide-box{
-        width: 230px;
-        height: 360px;
-        position: relative;
-    }
-    
-    .today-area .slide-box img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-    
     .today-area .arrow{
         position: absolute;
         top: -70px;
@@ -884,28 +776,6 @@
         margin: 0 auto;
         overflow: visible;
     }
-    .today-area .slide-box > img{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .today-area .mySwiper{
-        position: absolute !important;
-        top: 37%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 100%;
-        z-index: 20;
-        overflow: visible;
-    }
-    .today-area .slice-img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain !important;
-    }
-    
     .h-type1{height: 400px !important;}
     .h-type2{height: 330px !important;}
     .h-type3{height: 370px !important;}
@@ -959,13 +829,16 @@
         margin: 0;
     }
     .menu-page main ul{
-        margin-top: 0;
+        padding: 50px 0;
+    }
+    .menu-page main ul li:first-of-type {
+        border-top: 2px solid var(--theme-text);
     }
     .menu-page main ul li:not(:last-of-type){
         flex-direction: column;
         padding: 40px 4%;
         gap: 20px;
-        border-block: 2px solid var(--theme-text);
+        border-bottom: 2px solid var(--theme-text);
         display: flex;
         flex-wrap: wrap;
     }

@@ -123,7 +123,7 @@ function App(){
       ) : (
         <div className={`main-container ${isLoading ? 'hidden' : 'visible'}`}>
           <header className="main-header">
-          <button className="hamburger-btn" onClick={() => setIsMenuOpen(true)}>
+          <button type="button" className="hamburger-btn" onClick={() => setIsMenuOpen(true)}>
               <span></span>
               <span></span>
               <span></span>
@@ -236,7 +236,7 @@ function App(){
             <div className="today-area">
               <div className="today-title">
                 <h2>( TODAY MENU )</h2>
-                <button onClick={() => { setView('menu'); setIsMenuOpen(false); }}>VIEW ALL</button>
+                <button type="button" onClick={() => { setView('menu'); setIsMenuOpen(false); }}>VIEW ALL</button>
               </div>
 
               <div className="marquee-container">
@@ -277,7 +277,7 @@ function App(){
                     <address>2-4-8-101 Kotobuki Taito-ku, Seoul 111-0042</address>
                   </li>
                   <li>
-                    <button className="google-map-btn" onClick={() => window.open('https://www.google.com/maps/search/Flare+Pizza/@35.707198,139.789128,17z', '_blank')}>
+                    <button type="button" className="google-map-btn" onClick={() => window.open('https://www.google.com/maps/search/Flare+Pizza/@35.707198,139.789128,17z', '_blank')}>
                     GOOGLE MAP
                     </button>
                   </li>
@@ -297,7 +297,7 @@ function App(){
               </div>
 
               <div className="footer-logo">
-                <h2><img src={logo} alt="Flare Logo"/></h2>
+                <img src={logo} alt="Flare Logo"/>
                 <p>Copyright (C) Flare Pizza. All Rights Reserved.</p>
               </div>
 
@@ -339,9 +339,8 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
     <div className={`menu-page ${isDarkMode ? 'dark' : ''}`}>
       <aside>
         <div>
-        <button onClick={onBack}>CLOSE</button>
-        <img src={logo} alt="logo" onClick={onBack} />
-
+          <button type="button" onClick={onBack}>CLOSE</button>
+          <img src={logo} alt="go home" onClick={onBack} />
         </div>
       </aside>
 
@@ -349,7 +348,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
         <ul>
           <li>
             <div>
-              <span>PIZZA</span>
+              <b>PIZZA</b>
               <h2>Cheese<br></br>Slice</h2>
               <p>Cheese Slices</p>
               <p>Tomato Sauce / Original Blend Cheese / Parmesan Cheese / Olive Oil</p>
@@ -362,7 +361,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
 
           <li>
             <div>
-              <span>PIZZA</span>
+              <b>PIZZA</b>
               <h2>Pepperoni<br></br>Slice</h2>
               <p>Pepperoni Slices</p>
               <p>Tomato sauce / Original blend cheese / Pepperoni</p>
@@ -375,7 +374,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
 
           <li>
             <div>
-              <span>PIZZA</span>
+              <b>PIZZA</b>
               <h2>Mushroom<br></br>Slice</h2>
               <p>Mushroom Slices</p>
               <p>Tomato Sauce / Original Blend Cheese / Mushrooms</p>
@@ -387,7 +386,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div>
-              <span>PIZZA</span>
+              <b>PIZZA</b>
               <h2>Jalapeño<br></br>Slice</h2>
               <p>Sliced jalapenos</p>
               <p>Tomato sauce / Original blend cheese / Jalapenos</p>
@@ -399,7 +398,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div>
-              <span>PIZZA</span>
+              <b>PIZZA</b>
               <h2>Today's<br></br>Slice</h2>
               <p>Today's Slice</p>
               <p>Tomato sauce / Original blend cheese / Daily toppings</p>
@@ -411,7 +410,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div>
-              <span>TOPPING</span>
+              <b>TOPPING</b>
               <h2>Jalapeño</h2>
               <p>JALAPENO TOPIING</p>
               <strong>₩ 500</strong>
@@ -419,7 +418,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div>
-              <span>SIDE</span>
+              <b>SIDE</b>
               <h2>Garlic Knot</h2>
               <p>Garlic Knots</p>
               <p>Garlic bread made with pizza dough</p>
@@ -434,7 +433,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div>
-              <span>DRINK</span>
+              <b>DRINK</b>
               <h2>Coca-Cola</h2>
               <p>Coca-Cola</p>
               <strong>₩ 3,500</strong>
@@ -452,7 +451,7 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div>
-              <span>ALCOHOL</span>
+              <b>ALCOHOL</b>
               <h2>Bottled Beer</h2>
               <p>Budweiser, Stella Artois</p>
               <strong>₩ 6,500 ~</strong>
@@ -460,12 +459,12 @@ const MenuPage = ({ onBack, logo, isDarkMode }) => {
           </li>
           <li>
             <div className='sizediv'>
-              <span>HOLE</span>
+              <b>HOLE</b>
               <h2>Plain Pizza 20inch</h2>
               <p>Tomato sauce, original blend cheese, olive oil</p>
               <p>This pizza is approximately 50cm in diameter and serves 3-4 people.</p>
               <p>It is usually cut into 8 slices, but you can also cut it into 16 slices or squares (grid pattern) if you prefer.</p>
-              <strong>₩ 44000 YEN+ Pizza Box (1500 ₩)</strong>
+              <strong>₩ 44000 + Pizza Box (1500 ₩)</strong>
             </div>
             
             <div>

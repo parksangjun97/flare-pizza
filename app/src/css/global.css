@@ -332,10 +332,6 @@
         box-sizing: border-box;
     }
 
-    /* 헤더가 고정되면서 본문 윗부분이 가려지는 걸 방지 */
-    .main-container main {
-        padding-top: 10px;
-    }
     .main-header nav button:not(:last-of-type){
         margin-right: 5px;
     }
